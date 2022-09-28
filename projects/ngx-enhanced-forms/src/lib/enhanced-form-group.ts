@@ -1,6 +1,16 @@
 import { FormGroup, AbstractControl } from "@angular/forms";
 
 export abstract class EnhancedFormGroup<T> extends FormGroup {
+  constructor() {
+    super({})
+
+    const controls = this.createControls()
+
+    for (const [controlName, control] of Object.entries(controls)) {
+      this.addControl(controlName, control)
+    }
+  }
+
   /**
    * Register controls for this form
    */

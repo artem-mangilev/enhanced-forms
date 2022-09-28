@@ -1,5 +1,5 @@
 import { AbstractControl, FormControl } from "@angular/forms";
-import { EnhancedFormGroup } from "../enhanced-form-group";
+import { EnhancedFormGroup } from "projects/ngx-enhanced-forms/src/public-api";
 
 interface AuthFormModel {
   login: string;
