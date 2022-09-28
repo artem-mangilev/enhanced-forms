@@ -7,7 +7,7 @@ interface AuthFormModel {
 }
 
 export class AuthForm extends EnhancedFormGroup<AuthFormModel> {
-  public createControls(): { [controlName: string]: AbstractControl<any, any>; } {
+  protected createControls(): { [controlName: string]: AbstractControl<any, any>; } {
     return {
       'login': new FormControl(''),
       'password': new FormControl('')
@@ -22,7 +22,7 @@ export class AuthForm extends EnhancedFormGroup<AuthFormModel> {
   public toApiModel(): AuthFormModel {
     return {
       login: this.controls['login'].value,
-      password: this.controls['login'].value,
+      password: this.controls['password'].value,
     }
   }
 }

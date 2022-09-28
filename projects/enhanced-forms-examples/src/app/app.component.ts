@@ -14,4 +14,8 @@ export class AppComponent implements OnInit {
   public ngOnInit(): void {
     console.log(this.form)
   }
+
+  public onSubmit() {
+    console.log(this.form.toApiModel())
+  }
 }

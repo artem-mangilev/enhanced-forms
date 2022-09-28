@@ -14,7 +14,7 @@ export abstract class EnhancedFormGroup<T> extends FormGroup {
   /**
    * Register controls for this form
    */
-  public abstract createControls(): { [controlName: string]: AbstractControl };
+  protected abstract createControls(): { [controlName: string]: AbstractControl };
 
   /**
    * Map data from model to form

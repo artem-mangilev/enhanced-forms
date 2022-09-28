@@ -1,1 +1,11 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <label for="login">Login: </label>
+  <input id="login" type="text" formControlName="login">
+
+  <label for="password">Password: </label>
+  <input id="password" type="text" formControlName="password">
+
+  <button type="submit">Submit</button>
+</form>
+
 <router-outlet></router-outlet>
